@@ -6,8 +6,12 @@ func sortMapValues(input map[int]string) (result []string) {
 
 	for i := 0; i < len(input); i++ {
 
+		for k := range input {
+			min = k
+			break
+		}
+
 		for key := range input {
-			min = key
 			if key < min {
 				min = key
 			}
